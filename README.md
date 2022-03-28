@@ -24,5 +24,14 @@ We test the feasibility of this mechanism using an idealized test setting, and s
 
 # How to use this source code?
 
+## dependencies
+
 This code requires DUNE-PDELab version 2.8, which is an open-source toolbox for solving systems of partial differential equations, available freely at: https://gitlab.dune-project.org/pdelab/
 
+The source code depends on following dune modules: common, grid, geometry, istl, localfunctions, uggrid, functions, typetree, pdelab
+
+## source-code
+
+1. case1 : 1D scenarios.
+
+2. case2 : 2D scenarios.
