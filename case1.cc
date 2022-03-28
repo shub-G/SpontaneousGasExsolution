@@ -43,7 +43,7 @@ int main(int argc, char** argv)
 	    // Maybe initialize MPI
 	    Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
 	    if(helper.size()==1){
-	    std::cout << "This is case 1 of project Pockmark2P2C." << std::endl;
+	    std::cout << "This is case 1 of project SpontaneousGasExsolution." << std::endl;
 	    }
 	    if(Dune::MPIHelper::isFake){
 	      std::cout<< "This is a sequential program." << std::endl;
@@ -68,7 +68,7 @@ int main(int argc, char** argv)
 
 	    char input[40];
 	    sscanf(argv[1],"%39s", input);
-	    std::string input_file = "/sfs/fs1/work-geomar5/smomw325/dune_inputs/dune_2_8/Pockmark2P2C/case1_Test0_1D/";
+	    std::string input_file = "_path_to_project_/case1_Test0_1D/inputs/";
 	    input_file += input;
 	    std::cout<< "input file: " << input_file << std::endl ;
 
