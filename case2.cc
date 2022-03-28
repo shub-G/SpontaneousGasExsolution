@@ -43,7 +43,7 @@ int main(int argc, char** argv)
 	    // Maybe initialize MPI
 	    Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
 	    if(helper.rank()==0){
-	    std::cout << "This is case 2 of project Pockmark2P2C." << std::endl;
+	    std::cout << "This is case 2 of project SpontaneousGasExsolution." << std::endl;
 	    }
 	    if(Dune::MPIHelper::isFake){
 	      std::cout<< "This is a sequential program." << std::endl;
@@ -68,7 +68,7 @@ int main(int argc, char** argv)
 
 	    char input[40];
 	    sscanf(argv[1],"%39s", input);
-	    std::string input_file = "/sfs/fs1/work-geomar5/smomw325/dune_inputs/dune_2_8/Pockmark2P2C/case2_Test0_2D/";
+	    std::string input_file = "_path_to_project_/case2_Test0_2D/inputs/";
 	    input_file += input;
 	    if(helper.rank()==0){
 	    std::cout<< "input file: " << input_file << std::endl ;
@@ -114,7 +114,7 @@ int main(int argc, char** argv)
 		typedef Dune::UGGrid<dim> GridType;
 		GridType grid_type;
 		const std::string grid_file_name = ptree.get("grid.ug.name","grid.msh") ;
-		std::string grid_file = "/sfs/fs6/home-geomar/smomw325/dune_2_8/Pockmark2P2C/src/case2_Test0_2D/grids/";
+		std::string grid_file = "_path_to_project_/case2_Test0_2D/grids/";
 		grid_file += grid_file_name;
 		Dune::GmshReader<GridType> gmshreader;
 		std::shared_ptr<GridType> grid(gmshreader.read(grid_file,boundary_index_map, element_index_map,true,false));
